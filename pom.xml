@@ -15,24 +15,26 @@
     </properties>
 
     <dependencies>
-        <!-- Selenium Java -->
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-            <version>4.4.0</version> <!-- Use latest version available -->
+            <version>4.20.0</version>
         </dependency>
 
-        <!-- TestNG -->
+
+        <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.6.1</version> <!-- Use latest version available -->
+            <version>7.10.2</version>
             <scope>test</scope>
         </dependency>
+
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.6.1</version>
+            <version>7.10.2</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
@@ -45,8 +47,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>11</source> <!-- Match with JDK version used -->
-                    <target>11</target> <!-- Match with JDK version used -->
+                    <source>21</source> <!-- Match with JDK version used -->
+                    <target>21</target> <!-- Match with JDK version used -->
                 </configuration>
             </plugin>
 
