@@ -37,13 +37,11 @@ public class PriceComparisonArezo {
                 "https://www.amazon.com.tr/Roche-Anthelios-UVmune-Tinted-Renkli/dp/B09SLGZDXH",
                 "https://www.trendyol.com/la-roche-posay/anthelios-uvmune400-invisible-fluid-spf50-tum-cilt-tipleri-icin-yuz-gunes-kremi-50-ml-p-5770567"
         };
-
         String[] priceSelectors = {
                 "#offering-price > span:nth-child(1)", // First website CSS selector
                 "#corePrice_feature_div > div > div > span.a-price.aok-align-center > span:nth-child(2) > span.a-price-whole", // Second website CSS selector
                 "#product-detail-app > div > div.flex-container > div > div:nth-child(2) > div:nth-child(2) > div > div.product-detail-wrapper > div.pr-in-w > div > div > div.product-price-container > div > div > span" // Third website CSS selector
         };
-
         List<Double> prices = new ArrayList<>();
         try {
             for (int i = 0; i < urls.length; i++) {
@@ -58,8 +56,6 @@ public class PriceComparisonArezo {
             e.printStackTrace();
             Assert.fail("Failed to extract prices due to an exception: " + e.getMessage());
         }
-
-        // Output the results
         if (!prices.isEmpty()) {
             Collections.sort(prices);
             double cheapest = prices.get(0);

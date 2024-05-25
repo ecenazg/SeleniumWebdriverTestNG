@@ -37,13 +37,11 @@ public class PriceComparison {
                 "https://www.akakce.com/cep-telefonu/en-ucuz-iphone-15-pro-max-fiyati,1745758201.html",
                 "https://www.pttavm.com/iphone-15-pro-max-256-gb-naturel-titanyum-ithalatci-garantili-p-736735070?utm_source=akakce.com&utm_medium=fiyat-kiyaslama&utm_campaign=akakce&v=1.69.2"
         };
-
         String[] priceSelectors = {
                 "#corePrice_feature_div > div > div > span.a-price.aok-align-center > span:nth-child(2) > span.a-price-whole", // First website CSS selector
                 "#pd_v8 > div.bb_w > span.pb_v8 > span", // Second website CSS selector
                 "#main > div.relative > div > div > div.container > div.flex.flex-col > span > div.flex.flex-col.md\\:flex-row > div.px-4.md\\:pr-0.md\\:pl-5.mt-4.md\\:mt-0.flex.flex-col.flex-1 > div.flex.flex-col.xl\\:flex-row.justify-between.flex-1 > div.md\\:pr-6.flex.flex-col.flex-1.xl\\:w-auto.md\\:mb-3.lg\\:mb-0 > div.flex.leading-none.flex-col.mt-2.md\\:mt-6.mb-2.md\\:mb-0 > div.text-eGreen-700.font-semibold.text-3xl" // Third website CSS selector
         };
-
         List<Double> prices = new ArrayList<>();
         try {
             for (int i = 0; i < urls.length; i++) {
@@ -58,8 +56,6 @@ public class PriceComparison {
             e.printStackTrace();
             Assert.fail("Failed to extract prices due to an exception: " + e.getMessage());
         }
-
-        // Output the results
         if (!prices.isEmpty()) {
             Collections.sort(prices);
             double cheapest = prices.get(0);
